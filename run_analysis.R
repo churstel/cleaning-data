@@ -49,15 +49,13 @@ data$subject <- factor(subject)
 # Appropriately labels the data set with descriptive variable names and generate the tidy data set
 dat<-data.table(data)
 
-tidydata <- dat[, lapply(.SD, mean), by=list(activity, subject)]
-
 # Fix the variable names
-col<-colnames(tidydata); 
+col<-colnames(dat); 
 
 # Appropriately label the data set with descriptive activity names. 
 
 for (i in 1:length(col)) 
-{
+ {
         col[i] <- gsub("\\()","",col[i])
         col[i] <- gsub("(-std)","StdDev",col[i])
         col[i] <- gsub("(-mean)","Mean",col[i])
@@ -70,13 +68,13 @@ for (i in 1:length(col))
 };
 
 # Reassigning the new descriptive column names to the finalData set
-colnames(tidydata) <- col;
+colnames(dat) <- col;
 
 # From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-
+tidydata <- dat[, lapply(.SD, mean), by=list(activity, subject)]
 
 # Data set as a txt file created with write.table() using row.name=FALSE
-write.table(tidydata, file = 'tidydata.txt', row.names = FALSE, quote = FALSE)
+write.table(tidydata, file = 'submit.txt', row.names = FALSE, quote = FALSE)
 
 #return data
 tidydata
