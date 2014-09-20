@@ -52,25 +52,25 @@ dat<-data.table(data)
 tidydata <- dat[, lapply(.SD, mean), by=list(activity, subject)]
 
 # Fix the variable names
-col  = col(tidydata); 
+col<-colnames(tidydata); 
 
 # Appropriately label the data set with descriptive activity names. 
 
-for (i in 1:length(colNames)) 
+for (i in 1:length(col)) 
 {
-        col[i] = gsub("\\()","",col[i])
-        col[i] = gsub("-std$","StdDev",col[i])
-        col[i] = gsub("-mean","Mean",col[i])
-        col[i] = gsub("^(t)","time",col[i])
-        col[i] = gsub("^(f)","freq",col[i])
-        col[i] = gsub("([Gg]ravity)","Gravity",col[i])
-        col[i] = gsub("([Bb]ody[Bb]ody|[Bb]ody)","Body",col[i])
-        col[i] = gsub("[Gg]yro","Gyro",col[i])
-        col[i] = gsub("AccMag","AccMagnitude",col[i])
+        col[i] <- gsub("\\()","",col[i])
+        col[i] <- gsub("(-std)","StdDev",col[i])
+        col[i] <- gsub("(-mean)","Mean",col[i])
+        col[i] <- gsub("^(t)","time",col[i])
+        col[i] <- gsub("^(f)","freq",col[i])
+        col[i] <- gsub("([Gg]ravity)","Gravity",col[i])
+        col[i] <- gsub("([Bb]ody[Bb]ody|[Bb]ody)","Body",col[i])
+        col[i] <- gsub("[Gg]yro","Gyro",col[i])
+        col[i] <- gsub("AccMag","AccMagnitude",col[i])
 };
 
 # Reassigning the new descriptive column names to the finalData set
-col(tidydata) = col;
+colnames(tidydata) <- col;
 
 # From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
