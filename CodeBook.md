@@ -1,24 +1,22 @@
 # What does the code ?
-1. Merges the training and the test sets to create one data set.
+## 1. Merges the training and the test sets to create one data set.
 First, we perform the merge of each dataset using the rbind() function.
 We create 3 generic dataset :
 	1. data : merge "y_train" and "y_test"
 	2. label : merge "x_train" and "x_test" 
 	3. subject : merge "subject_train" and "subject_test"  
  
-2. We extract only the measurements on the mean and standard deviation for each measurement.        
+## 2. We extract only the measurements on the mean and standard deviation for each measurement.        
 We create 'features' dataset and subset it using reg expression.
 We use 'features' to get only the data that match with the index of 'features' vector and replace their names.
 
-
-3. Descriptive activity names to name the activities in the data set
+## 3. Descriptive activity names to name the activities in the data set
 	1. get the different label of octivity and add column's names : "level", "label"
 	2. Apply activity names to data. So we get a clear column identifying the activity.
 	3. get each subject and apply to subject to data
 
-4. Appropriately label the data set with descriptive activity names. 
+## 4. Appropriately label the data set with descriptive activity names. 
 Variables were renamed to make it more readable:
-
 	1. Replace -mean() with Mean
 	2. Replace -std with Std
 	3. Replace t with time
@@ -26,9 +24,9 @@ Variables were renamed to make it more readable:
 	5. Remove characters ()
 	6. Replace BodyBody with Body
 	
-	### See the correspondance list below 
+	*See the correspondance list belo*
 
-5. creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+## 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 We use lapply function and define "by" param with "activity" and "subject"
 We create a file "submit.txt" containing the tidy dataset.
 
