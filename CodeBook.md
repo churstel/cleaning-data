@@ -13,7 +13,7 @@ The experiments have been carried out with a group of 30 volunteers within an ag
 - Its activity label. 
 - An identifier of the subject who carried out the experiment.
 
-####The dataset includes the following files:
+####The dataset includes the following files :
 - __README.txt__
 - __features_info.txt__: Shows information about the variables used on the feature vector.
 - __features.txt__: List of all features.
