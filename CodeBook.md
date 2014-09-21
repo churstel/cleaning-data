@@ -1,5 +1,5 @@
 `OriginalVariables`|`TidyVariables`
-———————————————— |——————————————
+------------------------------|------------------------------
 `x`|`x`
 `tBodyAcc-mean()-X`|`timeBodyAccMean-X`
 `tBodyAcc-mean()-Y`|`timeBodyAccMean-Y`
