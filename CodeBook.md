@@ -24,7 +24,7 @@ Variables were renamed to make it more readable:
 	5. Remove characters ()
 	6. Replace BodyBody with Body
 	
-	_See the correspondance list below * _
+_NB = See the correspondance list below_
 
 ## 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 We use lapply function and define "by" param with "activity" and "subject"
