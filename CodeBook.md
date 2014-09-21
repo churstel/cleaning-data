@@ -1,4 +1,17 @@
-`OriginalVariables`|`TidyVariables`
+#Tidy data set
+
+Tidy data set in "submit.txt" contains the same variables as the raw does, but the variables were renamed to make it more readable:
+
+1. Replace -mean() with Mean
+2. Replace -std with Std
+3. Replace t with time
+4. Replace f with freq
+5. Remove characters ()
+6. Replace BodyBody with Body
+
+## Lits of old colnames and new colnames :
+
+`Raw Dataset`|`Tidy Dataset`
 ------------------------------|------------------------------
 `x`|`x`
 `tBodyAcc-mean()-X`|`timeBodyAccMean-X`
