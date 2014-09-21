@@ -51,6 +51,7 @@ dat<-data.table(data)
 
 # Fix the variable names
 col<-colnames(dat); 
+colold<-colnames(dat); 
 
 # Appropriately label the data set with descriptive activity names. 
 
@@ -75,7 +76,6 @@ tidydata <- dat[, lapply(.SD, mean), by=list(activity, subject)]
 
 # Data set as a txt file created with write.table() using row.name=FALSE
 write.table(tidydata, file = 'submit.txt', row.names = FALSE, quote = FALSE)
-write.table(col, file = 'oldcolnames.txt', row.names = FALSE, quote = FALSE)
 
 #return data
 tidydata
