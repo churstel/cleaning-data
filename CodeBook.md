@@ -9,7 +9,7 @@ Tidy data set in "submit.txt" contains the same variables as the raw does, but t
 5. Remove characters ()
 6. Replace BodyBody with Body
 
-## Lits of old colnames and new colnames :
+## Lits of old variable's names and new names of variable :
 
 `Raw Dataset`|`Tidy Dataset`
 ------------------------------|------------------------------
