@@ -10,15 +10,15 @@ One of the most exciting areas in all of data science right now is wearable comp
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
 
 
-## Prerequisit
+## Prerequisities
 Perform the download and unzip of the data from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
 Set your working directory onto the directory maned « UCI HAR Dataset » by using command 
 ```
 setwd("YOURPATH")
 ```
-#Script ?
-The script contains a function run.analysis() that performs the following tasks :
+#Script
+The script contains a function _run.analysis()_ that performs the following tasks :
 ### 1. Merges the training and the test sets to create one data set.
 First, we perform the merge of each dataset using the rbind() function.
 We create 3 generic dataset :
