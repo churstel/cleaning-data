@@ -1,4 +1,4 @@
-# What does the code ?
+# run_analysis.R CodeBook : What does the script ?
 ## 1. Merges the training and the test sets to create one data set.
 First, we perform the merge of each dataset using the rbind() function.
 We create 3 generic dataset :
