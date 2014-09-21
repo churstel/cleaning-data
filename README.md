@@ -13,7 +13,7 @@ The experiments have been carried out with a group of 30 volunteers within an ag
 ## Prerequisities
 Perform the download and unzip of the data from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
-Set your working directory onto the directory maned « UCI HAR Dataset » by using command 
+Set your working directory onto the directory named __UCI HAR Dataset__ by using command :
 ```
 setwd("YOURPATH")
 ```
