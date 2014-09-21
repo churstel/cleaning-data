@@ -37,6 +37,7 @@ The following files are available for the train and test data. Their description
 #### 1. Merges the training and the test sets to create one data set.
 First, we perform the merge of each dataset using the rbind() function.
 We create 3 generic dataset :
+
 	1. __data__ : merge "y_train" and "y_test"
 	2. __label__ : merge "x_train" and "x_test" 
 	3. __subject__ : merge "subject_train" and "subject_test"  
@@ -52,6 +53,7 @@ We use 'features' to get only the data that match with the index of 'features' v
 
 #### 4. Appropriately label the data set with descriptive activity names. 
 Variables were renamed to make it more readable:
+
 	1. Replace -mean() with Mean
 	2. Replace -std with Std
 	3. Replace t with time
